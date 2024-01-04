@@ -1,5 +1,19 @@
 ![](rfsocpynq_logo.png)
 
+# Ohio State modifications
+
+* Add HTG-ZRF-HH board.
+* (in Pynq submodule) - fix Vagrant file so it actually works by adding i386 architecture.
+
+Note: The Pynq submodule contains a Vagrant file to spin up a virtual machine. You need to use this. Don't try to do any of these directions in a base
+operating system! It won't work and it's not safe. This means you need to check this out somewhere with a bucket-ton of space (hundreds of GB free). If you're on Windows
+you'll end up needing a complete second installation of Vivado (because OF COURSE). On Linux you can be ultra-clever and mount the external installation
+as a shared folder inside the VM but it NEEDS TO BE IN THE SAME LOCATION inside the VM. You'll need to figure out how to use the license inside the VM.
+You're bright, you can figure it out.
+
+Again - DO NOT try to follow these instructions in your host operating system.
+
+# Original README starts here
 
 This repository contains the source code and build scripts for the RFSoC-PYNQ base design and SD card images. The design files in this repository are compatible with Xilinx Vivado 2022.1, and PYNQ v3.0.0 and later.  
 
