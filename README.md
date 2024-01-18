@@ -4,6 +4,7 @@
 
 * Add HTG-ZRF-HH board.
 * (in Pynq submodule) - fix Vagrant file so it actually works by adding i386 architecture.
+* (in Pynq submodule) - fix DebugBridge instance so it works on Python and not just Jupyter
 
 Note: The Pynq submodule contains a Vagrant file to spin up a virtual machine. You need to use this. Don't try to do any of these directions in a base
 operating system! It won't work and it's not safe. This means you need to check this out somewhere with a bucket-ton of space (hundreds of GB free). If you're on Windows
@@ -12,6 +13,10 @@ as a shared folder inside the VM but it NEEDS TO BE IN THE SAME LOCATION inside 
 You're bright, you can figure it out.
 
 Again - DO NOT try to follow these instructions in your host operating system.
+
+The PYNQ repositories themselves aren't very well maintained or supported (the Vagrant file fix in the OSU
+commit is mentioned __in a comment on the commit__ ). I'll try to backport stuff from there but these
+might just end up being a local fork.
 
 # Original README starts here
 
