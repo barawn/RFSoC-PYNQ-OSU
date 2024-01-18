@@ -1,6 +1,6 @@
 [submodule "PYNQ"]
 	path = PYNQ
-	url = https://github.com/xilinx/PYNQ
+	url = https://github.com/barawn/PYNQ-OSU
 [submodule "pynq"]
 	path = pynq
-	url = https://github.com/Xilinx/PYNQ
+	url = https://github.com/barawn/PYNQ-OSU
