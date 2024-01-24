@@ -18,6 +18,17 @@ The PYNQ repositories themselves aren't very well maintained or supported (the V
 commit is mentioned __in a comment on the commit__ ). I'll try to backport stuff from there but these
 might just end up being a local fork.
 
+## Building
+
+```
+make BOARD=(board name)
+```
+like ZCU111, HTG-ZRF-HH.
+
+__After the build__, you need to run OSU_fix_image.sh (image name) to __actually__ update files in the image. PYNQ
+actually grabs prebuilt images from Xilinx's website and they're ~2 GB, so I don't feel like rehosting it. Just easier
+for now to selectively replace the files that get edited.
+
 # Original README starts here
 
 This repository contains the source code and build scripts for the RFSoC-PYNQ base design and SD card images. The design files in this repository are compatible with Xilinx Vivado 2022.1, and PYNQ v3.0.0 and later.  
