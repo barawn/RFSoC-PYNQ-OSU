@@ -15,6 +15,7 @@ all: checkenv_rfsocpynq gitsubmodule ${PREBUILT_SDIST_DST} ${PREBUILT_ROOTFS_DST
 	@echo ""
 	@echo "  RFSoC-PYNQ completed building image: ${IMAGE}"
 	@echo ""
+	./OSU_fix_image.sh ${IMAGE}
 
 gitsubmodule:
 	# git submodule init && git submodule update
