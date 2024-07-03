@@ -2,9 +2,10 @@
 
 # Ohio State modifications
 
-* Add HTG-ZRF-HH board.
+* Add HTG-ZRF-HH, TEB0835, SURFv6/SURFv6revB/SURFv6revBG3 board.
 * (in Pynq submodule) - fix Vagrant file so it actually works by adding i386 architecture.
 * (in Pynq submodule) - fix DebugBridge instance so it works on Python and not just Jupyter
+* (in Pynq submodule) - change build system so that a board-specific variable (SDBOOT_boardname) can be used to specify the location of the root filesystem
 
 Note: The Pynq submodule contains a Vagrant file to spin up a virtual machine. You need to use this. Don't try to do any of these directions in a base
 operating system! It won't work and it's not safe. This means you need to check this out somewhere with a bucket-ton of space (hundreds of GB free). If you're on Windows
