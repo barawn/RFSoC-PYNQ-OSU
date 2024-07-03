@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 ARCH_TEB0835 := aarch64
-BSP_TEB0835 := TEB0835v1.bsp
+BSP_TEB0835 := TEB0835.bsp
 BITSTREAM_TEB0835 := base/base.bit
 FPGA_MANAGER_TEB0835 := 1
 

@@ -1,8 +1,7 @@
-# Copyright (C) 2022 Xilinx, Inc
-# SPDX-License-Identifier: BSD-3-Clause
-
 ARCH_HTG-ZRF-HH := aarch64
-BSP_HTG-ZRF-HH := HTG-ZRF-HHv1.bsp
+# this HAS to be $(BOARD_NAME).bsp
+# due to the insanity of the Pynq build system
+BSP_HTG-ZRF-HH := HTG-ZRF-HH.bsp
 BITSTREAM_HTG-ZRF-HH := base/base.bit
 FPGA_MANAGER_HTG-ZRF-HH := 1
 
