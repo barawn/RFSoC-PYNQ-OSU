@@ -2,9 +2,10 @@
 
 # Ohio State modifications
 
-* Add HTG-ZRF-HH board.
+* Add HTG-ZRF-HH, TEB0835, SURFv6/SURFv6revB/SURFv6revBG3 board.
 * (in Pynq submodule) - fix Vagrant file so it actually works by adding i386 architecture.
 * (in Pynq submodule) - fix DebugBridge instance so it works on Python and not just Jupyter
+* (in Pynq submodule) - change build system so that a board-specific variable (SDBOOT_boardname) can be used to specify the location of the root filesystem
 
 Note: The Pynq submodule contains a Vagrant file to spin up a virtual machine. You need to use this. Don't try to do any of these directions in a base
 operating system! It won't work and it's not safe. This means you need to check this out somewhere with a bucket-ton of space (hundreds of GB free). If you're on Windows
@@ -17,6 +18,17 @@ Again - DO NOT try to follow these instructions in your host operating system.
 The PYNQ repositories themselves aren't very well maintained or supported (the Vagrant file fix in the OSU
 commit is mentioned __in a comment on the commit__ ). I'll try to backport stuff from there but these
 might just end up being a local fork.
+
+## Building
+
+```
+make BOARD=(board name)
+```
+like ZCU111, HTG-ZRF-HH.
+
+__After the build__, you need to run OSU_fix_image.sh (image name) to __actually__ update files in the image. PYNQ
+actually grabs prebuilt images from Xilinx's website and they're ~2 GB, so I don't feel like rehosting it. Just easier
+for now to selectively replace the files that get edited.
 
 # Original README starts here
 
