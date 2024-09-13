@@ -6,6 +6,7 @@
 * (in Pynq submodule) - fix Vagrant file so it actually works by adding i386 architecture.
 * (in Pynq submodule) - fix DebugBridge instance so it works on Python and not just Jupyter
 * (in Pynq submodule) - change build system so that a board-specific variable (SDBOOT_boardname) can be used to specify the location of the root filesystem
+* (in Pynq submodule) - fix setup_host.sh so it tries to fetch qemu from the proper URL (god I hate these people)
 
 Note: The Pynq submodule contains a Vagrant file to spin up a virtual machine. You need to use this. Don't try to do any of these directions in a base
 operating system! It won't work and it's not safe. This means you need to check this out somewhere with a bucket-ton of space (hundreds of GB free). If you're on Windows
@@ -18,6 +19,15 @@ Again - DO NOT try to follow these instructions in your host operating system.
 The PYNQ repositories themselves aren't very well maintained or supported (the Vagrant file fix in the OSU
 commit is mentioned __in a comment on the commit__ ). I'll try to backport stuff from there but these
 might just end up being a local fork.
+
+## Vagrant/Virtualbox just dies on me!
+
+Yeah. I know. There was some kernel fix that blew up VirtualBox versions pre-7 recently, and many
+of the distros still have it, I guess. I don't know the details, I just know you probably need to
+upgrade *both* Vagrant *and* VirtualBox using their upstream apt repositories on Ubuntu.
+
+See https://developer.hashicorp.com/vagrant/install
+and https://www.virtualbox.org/wiki/Linux_Downloads
 
 ## Building
 
