@@ -29,6 +29,16 @@ upgrade *both* Vagrant *and* VirtualBox using their upstream apt repositories on
 See https://developer.hashicorp.com/vagrant/install
 and https://www.virtualbox.org/wiki/Linux_Downloads
 
+## Shouldn't you submit these changes to upstream?
+
+Are you kidding me? The only changes they've made in over a year are to
+update a few internal links. The setup_hosts script mistake has been there
+forever. No one there cares, if there even is anyone there at all.
+
+## I'm so happy I found this: can you help me with this non-PUEO thing?
+
+No.
+
 ## Building
 
 ```
