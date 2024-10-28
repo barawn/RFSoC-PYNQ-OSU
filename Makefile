@@ -11,6 +11,10 @@ BASE_OVERLAY := ${BASE_OVERLAY_PATH}/base.bit
 VERSION := 3.0.1
 IMAGE := ${BOARD}-${VERSION}.img
 
+${CURDIR}/boards/SURFv6revB/SURFv6revB.bsp: $(shell find ${CURDIR}/boards/SURFv6revB/bsp_source/)
+	rm -rf ${CURDIR}/boards/SURFv6revB/SURFv6revB.bsp
+	tar -f ${CURDIR}/boards/SURFv6revB/SURFv6revB.bsp --directory ${CURDIR}/boards/SURFv6revB/bsp_source/ -cz SURFv6revB
+
 all: checkenv_rfsocpynq gitsubmodule ${PREBUILT_SDIST_DST} ${PREBUILT_ROOTFS_DST} checkenv_pynq ${BASE_OVERLAY} ${IMAGE}
 	@echo ""
 	@echo "  RFSoC-PYNQ completed building image: ${IMAGE}"
